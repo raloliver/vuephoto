@@ -22,7 +22,9 @@
     computed: {
       filtredItems() {
         if (this.search) {
-          return []
+          //this 'i' it is for to get all, uppercase or not, forgot the sensitive case
+          let filter = new RegExp(this.search.trim(), 'i')
+          return this.photos.filter(photo => filter.test(photo.titulo))
         } else {
           return this.photos
         }
