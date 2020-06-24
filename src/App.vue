@@ -19,10 +19,13 @@ export default {
     };
   },
   created() {
-    let promise = this.$http.get("http://localhost:3000/v1/fotos");
-    promise.then(res => {
-      res.json().then(photos => (this.photos = photos));
-    });
+    this.$http
+      .get("http://localhost:3000/v1/fotos")
+      .then(res => res.json())
+      .then(
+        photos => (this.photos = photos),
+        err => console.error(err)
+      );
   }
 };
 </script>
