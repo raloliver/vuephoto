@@ -29,3 +29,9 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 ## Style scoped
 
 > Use the tag `scoped` at style tag to close the scope for only the current component and use a global selector to stylized items.
+
+## v-on and v-bind
+
+- `v-on` from template to controller (two-way-data-binding). This directive performs an event association that flows from the view to the data source. Any change to the data source will update the view associated with it, as long as there is an association via v-bind.
+
+The v-bind directive makes an association that flows from the data source to the view. Any change to the data source will cause the view to be updated to represent the new value. The v-on directive performs an event association that flows from the view to the data source. For the changes made by v-on to be updated in the view, it is necessary to combine v-on with v-bind.

@@ -1,8 +1,9 @@
 <template>
   <div class="wrap">
     <h1 class="center">{{ title }}</h1>
+    <input v-on:input="search = $event.target.value" type="search" class="d-block w-100" placeholder="search...">
     <ul class="list">
-      <li class="item" v-for="photo of photos" :key="photo._id">
+      <li class="d-inline" v-for="photo of photos" :key="photo._id">
         <vue-panel :title="photo.titulo">
           <img class="w-100" :src="photo.url" :alt="photo.titulo" />
         </vue-panel>
@@ -21,7 +22,8 @@
     data() {
       return {
         title: "Welcome to Vue Photo",
-        photos: []
+        photos: [],
+        search: '',
       };
     },
     created() {
@@ -51,11 +53,15 @@
     list-style: none;
   }
 
-  .item {
+  .d-inline {
     display: inline-block;
   }
 
   .w-100 {
     width: 100%;
+  }
+
+  .d-block {
+    display: block;
   }
 </style>
