@@ -24,7 +24,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 - `created(){}` logic this is call when the component are created.
 - `props` inputs from components
 - `components` create tags for import components (remeber to export with default and import with the same name)
-- `slots` if you want to add some content inside a component. It is possible to have more than one slot per component, for example, to insert content in locations other than our component. There is a named slot for this. Example: `<slot name="header"></slot>` and at component call `<componente-qualquer><div slot="header">Lorem</componente-qualquer>`.
+- `slots` if you want to add some content inside a component. It is possible to have more than one slot per component, for example, to insert content in locations other than our component. There is a named slot for this. Example: `<slot name="header"></slot>` and at component call `<componente-qualquer><div slot="header">Lorem</componente-qualquer>`. That is not possible to use `v-show` directive at slot.
 - `computed` all props needs to be a method. When you call this method, you need to call without the `()` like a prop.
 
 ## Style scoped
@@ -33,6 +33,10 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ## v-on and v-bind
 
-- `v-on` from template to controller (two-way-data-binding). This directive performs an event association that flows from the view to the data source. Any change to the data source will update the view associated with it, as long as there is an association via v-bind.
+- `v-on` from template to controller (two-way-data-binding). This directive performs an event association that flows from the view to the controller. Any change to the controller will update the view associated with it, as long as there is an association via v-bind.
+- events: ``v-on:input`, `v-on:dblclick`
+- You may want to use `@` instead `v-on`, example: `@input`
 
-The v-bind directive makes an association that flows from the data source to the view. Any change to the data source will cause the view to be updated to represent the new value. The v-on directive performs an event association that flows from the view to the data source. For the changes made by v-on to be updated in the view, it is necessary to combine v-on with v-bind.
+> `:` it is from controller to view and `@` it is from view to controller
+
+The v-bind directive makes an association that flows from the controller to the view. Any change to the controller will cause the view to be updated to represent the new value. The v-on directive performs an event association that flows from the view to the controller. For the changes made by v-on to be updated in the view, it is necessary to combine v-on with v-bind.

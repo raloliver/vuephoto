@@ -1,7 +1,7 @@
 <template>
   <div class="wrap">
     <h1 class="center">{{ title }}</h1>
-    <input v-on:input="search = $event.target.value" type="search" class="d-block w-100" placeholder="search...">
+    <input @input="search = $event.target.value" type="search" class="d-block w-100" placeholder="search...">
     <ul class="list">
       <li class="d-inline" v-for="photo of filtredItems" :key="photo._id">
         <vue-panel :title="photo.titulo">
