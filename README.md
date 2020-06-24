@@ -22,3 +22,5 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 > These are functions of our components that are called at different stages in the life cycle of a component, that is, from its creation to its destruction.
 
 - `created(){}` logic this is call when the component are created.
+- `props` inputs from components
+- `components` create tags for import components (remeber to export with default and import with the same name)
