@@ -25,6 +25,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 - `props` inputs from components
 - `components` create tags for import components (remeber to export with default and import with the same name)
 - `slots` if you want to add some content inside a component. It is possible to have more than one slot per component, for example, to insert content in locations other than our component. There is a named slot for this. Example: `<slot name="header"></slot>` and at component call `<componente-qualquer><div slot="header">Lorem</componente-qualquer>`.
+- `computed` all props needs to be a method. When you call this method, you need to call without the `()` like a prop.
 
 ## Style scoped
 

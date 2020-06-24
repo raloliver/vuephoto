@@ -3,7 +3,7 @@
     <h1 class="center">{{ title }}</h1>
     <input v-on:input="search = $event.target.value" type="search" class="d-block w-100" placeholder="search...">
     <ul class="list">
-      <li class="d-inline" v-for="photo of photos" :key="photo._id">
+      <li class="d-inline" v-for="photo of filtredItems" :key="photo._id">
         <vue-panel :title="photo.titulo">
           <img class="w-100" :src="photo.url" :alt="photo.titulo" />
         </vue-panel>
@@ -18,6 +18,15 @@
     name: "app",
     components: {
       'vue-panel': Panel
+    },
+    computed: {
+      filtredItems() {
+        if (this.search) {
+          return []
+        } else {
+          return this.photos
+        }
+      }
     },
     data() {
       return {
