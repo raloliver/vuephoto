@@ -11,11 +11,13 @@
     data() {
       return {
         title: 'Welcome to Vue Photo',
-        image: {
-          src: 'https://storage.coverr.co/t/fx61sPhmdLbA5KY02aWMZ02rztv61oEhJ5',
-          alt: 'Duck'
-        }
+        photos: [
+
+        ]
       }
+    },
+    created() {
+      
     }
   }
 </script>
