@@ -12,7 +12,7 @@
   };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .panel {
     padding: 0 auto;
     border: solid 2px grey;
@@ -32,5 +32,9 @@
     margin: 0 0 15px 0;
     padding: 10px;
     text-transform: uppercase;
+  }
+
+  * {
+    box-shadow: 5px 5px 5px;
   }
 </style>
