@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap"></div>
+  <div class="wrap">Components living here...</div>
 </template>
 
 <script>
