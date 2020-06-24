@@ -1,10 +1,11 @@
 <template>
   <div class="panel">
     <h2 class="panel-header" @dblclick="isVisible = !isVisible">{{ title }}</h2>
-    <div class="panel-content" v-show="isVisible">
-      <slot>
-      </slot>
-    </div>
+    <transition name="fade">
+      <div class="panel-content" v-show="isVisible">
+        <slot> </slot>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -43,5 +44,15 @@
 
   * {
     box-shadow: 5px 5px 5px;
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity .5s;
   }
 </style>

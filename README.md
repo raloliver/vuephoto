@@ -40,3 +40,11 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 > `:` it is from controller to view and `@` it is from view to controller
 
 The v-bind directive makes an association that flows from the controller to the view. Any change to the controller will cause the view to be updated to represent the new value. The v-on directive performs an event association that flows from the view to the controller. For the changes made by v-on to be updated in the view, it is necessary to combine v-on with v-bind.
+
+## Add and remove classes
+
+- `transition` that is the component to use with the `name` property to add and remove classes basead on some event.
+
+my-class-fade-enter // before the element is added or removed, the current state
+my-class-enter-active // when the element is being included
+my-class-leave-active // when the element is being removed
