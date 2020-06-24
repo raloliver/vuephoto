@@ -24,3 +24,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 - `created(){}` logic this is call when the component are created.
 - `props` inputs from components
 - `components` create tags for import components (remeber to export with default and import with the same name)
+- `slots` if you want to add some content inside a component
