@@ -11,6 +11,7 @@
       <li class="d-inline" v-for="photo of filtredItems" :key="photo._id">
         <vue-panel :title="photo.titulo">
           <img class="w-100" :src="photo.url" :alt="photo.titulo" />
+          <vue-button type="button" label="Delete" />
         </vue-panel>
       </li>
     </ul>
@@ -19,10 +20,12 @@
 
 <script>
 import Panel from "../shared/panel/Panel.vue";
+import Button from "../shared/button/Button.vue";
 export default {
   name: "app",
   components: {
-    "vue-panel": Panel
+    "vue-panel": Panel,
+    "vue-button": Button
   },
   computed: {
     filtredItems() {
