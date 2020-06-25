@@ -51,5 +51,6 @@ my-class-leave-active // when the element is being removed
 
 ## vue-router
 
+- `router-view` indicate to the template of the main page of the application the location where the other components loaded through routes must be rendered.
 - to remove `#` at URL, your server must be prepared and at `new VueRouter({})` add the prop `mode: 'history'`.
 - use component `router-link` with `to` prop. Like a href in the a tag. But, you can use expressions.

@@ -7,7 +7,9 @@
         </li>
       </ul>
     </nav>
-    <router-view></router-view>
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -47,5 +49,15 @@ export default {
 
 .d-block {
   display: block;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
 </style>

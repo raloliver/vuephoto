@@ -45,14 +45,4 @@ export default {
 * {
   box-shadow: 5px 5px 5px;
 }
-
-.fade-enter,
-.fade-leave-active {
-  opacity: 0;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
 </style>
