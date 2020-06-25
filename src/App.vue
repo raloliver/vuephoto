@@ -1,12 +1,6 @@
 <template>
   <div class="wrap">
-    <nav>
-      <ul>
-        <li v-for="route in routes" :key="route.key">
-          <router-link :to="route.path ? route.path : '/'">{{ route.title }}</router-link>
-        </li>
-      </ul>
-    </nav>
+    <vue-menu :routes="routes" />
     <transition name="fade">
       <router-view></router-view>
     </transition>
@@ -15,7 +9,12 @@
 
 <script>
 import { routes } from "./routes";
+import Menu from "./components/shared/menu/Menu.vue";
+
 export default {
+  components: {
+    "vue-menu": Menu
+  },
   data() {
     return {
       routes
