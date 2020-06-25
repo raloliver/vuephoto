@@ -22,7 +22,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 > These are functions of our components that are called at different stages in the life cycle of a component, that is, from its creation to its destruction.
 
 - `created(){}` logic this is call when the component are created.
-- `props` inputs from components
+- `props` inputs from components. You may define type and rules for each prop. This is important to show more details when error throws.
 - `components` create tags for import components (remeber to export with default and import with the same name)
 - `slots` if you want to add some content inside a component. It is possible to have more than one slot per component, for example, to insert content in locations other than our component. There is a named slot for this. Example: `<slot name="header"></slot>` and at component call `<componente-qualquer><div slot="header">Lorem</componente-qualquer>`. That is not possible to use `v-show` directive at slot.
 - `computed` all props needs to be a method. When you call this method, you need to call without the `()` like a prop.
@@ -48,3 +48,9 @@ The v-bind directive makes an association that flows from the controller to the 
 my-class-fade-enter // before the element is added or removed, the current state
 my-class-enter-active // when the element is being included
 my-class-leave-active // when the element is being removed
+
+## vue-router
+
+- `router-view` indicate to the template of the main page of the application the location where the other components loaded through routes must be rendered.
+- to remove `#` at URL, your server must be prepared and at `new VueRouter({})` add the prop `mode: 'history'`.
+- use component `router-link` with `to` prop. Like a href in the a tag. But, you can use expressions.
