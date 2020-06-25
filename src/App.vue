@@ -1,9 +1,25 @@
 <template>
-  <router-view></router-view>
+  <div class="wrap">
+    <nav>
+      <ul>
+        <li v-for="route in routes" :key="route.key">
+          <router-link :to="route.path ? route.path : '/'">{{ route.title }}</router-link>
+        </li>
+      </ul>
+    </nav>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-export default {};
+import { routes } from "./routes";
+export default {
+  data() {
+    return {
+      routes
+    };
+  }
+};
 </script>
 
 <style lang="scss">
