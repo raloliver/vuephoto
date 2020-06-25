@@ -36,6 +36,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 - `v-on` from template to controller (two-way-data-binding). This directive performs an event association that flows from the view to the controller. Any change to the controller will update the view associated with it, as long as there is an association via v-bind.
 - events: ``v-on:input`, `v-on:dblclick`
 - You may want to use `@` instead `v-on`, example: `@input`
+- the `@` attr to handle with event, you can use the modifier `.native`, example: `@click.native`.
 
 > `:` it is from controller to view and `@` it is from view to controller
 
