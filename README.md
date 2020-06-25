@@ -48,3 +48,7 @@ The v-bind directive makes an association that flows from the controller to the 
 my-class-fade-enter // before the element is added or removed, the current state
 my-class-enter-active // when the element is being included
 my-class-leave-active // when the element is being removed
+
+## vue-router
+
+- to remove `#` at URL, your server must be prepared and at `new VueRouter({})` add the prop `mode: 'history'`.

@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap">Components living here...</div>
+  <router-view></router-view>
 </template>
 
 <script>
