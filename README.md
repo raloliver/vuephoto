@@ -55,3 +55,11 @@ my-class-leave-active // when the element is being removed
 - `router-view` indicate to the template of the main page of the application the location where the other components loaded through routes must be rendered.
 - to remove `#` at URL, your server must be prepared and at `new VueRouter({})` add the prop `mode: 'history'`.
 - use component `router-link` with `to` prop. Like a href in the a tag. But, you can use expressions.
+
+## Custom Events
+
+- communication between child component and parent component
+- like a `props` but not is for data, but it is for events
+- with `this.$emit` you can use event emitter in vue. First arg is the name of v-on method, end the second arg it is `$event`, this is what you want to sent from root to parent, and you need to put as first arg when you call the @nameOfYouEvent.
+
+> They can be triggered with this. $ Issue through any component. This function receives as first parameter the name of the event of our choice and optionally as according to the data that will be forwarded with the event.

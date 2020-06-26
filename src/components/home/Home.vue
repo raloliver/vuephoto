@@ -11,7 +11,7 @@
       <li class="d-inline" v-for="photo of filtredItems" :key="photo._id">
         <vue-panel :title="photo.titulo">
           <img class="w-100" :src="photo.url" :alt="photo.titulo" />
-          <vue-button type="button" label="Delete" @click.native="deleteItem(photo)" />
+          <vue-button type="button" label="Delete" @eventEmitter="deleteItem(photo)" />
         </vue-panel>
       </li>
     </ul>

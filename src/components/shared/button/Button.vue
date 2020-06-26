@@ -1,10 +1,15 @@
 <template>
-  <button class="button danger" :type="type">{{ label }}</button>
+  <button @click="callToAction()" class="button danger" :type="type">{{ label }}</button>
 </template>
 
 <script>
 export default {
-  props: ["type", "label"]
+  props: ["type", "label"],
+  methods: {
+    callToAction() {
+      $this.emit('eventEmitter')
+    }
+  }
 };
 </script>
 
